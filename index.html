@@ -68,8 +68,8 @@
             </p>
             <h4>Web Components vs Web Applications</h4>
             <p>
-                Other frameworks like <strong>React</strong> are <em>Web Component Frameworks</em>, but <strong>Angular</strong> is a Web Application
-                 framework because it comes with a sort of other tools (and opinions) that go far beyond Web Components.
+                Other frameworks like <strong>React</strong> are <em>Web Component Frameworks</em>, but <strong>Angular is a Web Application framework</strong> 
+                because it comes with a sort of other tools (and opinions) that go far beyond Web Components.
             </p>
             <p>
                 Ok, Angular helps creating components, but:
@@ -90,10 +90,12 @@
             <h4>What's inside Angular?</h4>
             <p>So, let's take a quick look to what comes with Angular:</p>
             <ul>
-                <li>ngc - Ng Compiler (a wrapper around Typescript Complier)</li>
+                <li>Angular CLI</li>
+                <li>ngc - Ng Compiler (a wrapper around Typescript Compiler)</li>
                 <li>Webpack - Bundler</li>
                 <li>Zone.js - Asynchronus abstraction layer (asynchronus context provider, change detection, error handling)</li>
                 <li>RxJS - Observer pattern library/framework</li>
+                <li>Karma - Test runner</li>
                 <li>The Angular Core - Renderer2 and rest of abstractions</li>
                 <li>WIP?</li>
             </ul>
@@ -103,12 +105,46 @@
             <header>
                 <h2>Angular CLI</h2>
             </header>
-            <h3>Angular CLI anatomy & usage</h3>
+            <p>Ok, so we have a lot of different packages, libraries and tools being use there in Angular. How does it orchestrates them? Using the CLI.</p>
+            <p><strong>ng</strong> (Angular CLI) is the Angular's swiss army knife.</p>
+
+            <h3>Angular CLI anatomy</h3>
+            <p>Well, let's start describing it and its usage.</p>
+            <p>First of all, the Angular CLI is no more than the glue for other tools outside the Angular CLI and the dependencies of itself.</p>
+            <p>These dependencies are the real tools doing the job on the background. So we have something like this:</p>
+            <ul>
+                <li><strong>@angular/cli</strong> - Main package</li>
+                <li><strong>@schematics/angular</strong></li>
+                <li><strong>@schematics/update</strong></li>
+                <li><strong>@angular-devkit/core</strong></li>
+                <li><strong>@angular-devkit/architect</strong></li>
+                <li><strong>@angular-devkit/schematics</strong></li>
+            </ul>
+
+            <p>Let's start with the glue itself.</p>
+            <p><strong>@angular/cli</strong> handles the comands, default behaviors and the external tools used in the build/deploy process (Webpack, Karma, TsLint...). In summary, it handles our Angular Workspace and the automatic tasks run inside it.</p>
+
+            <p>Ok, quite straight forward isn't it?</p>
+            <p>
+                Then we have the packages that are part of the <strong>@schematics/*</strong> namespace. 
+                These contain the default schematics provided by Angular Team, and used through the <strong>ng generate</strong> command.
+            </p>
+
+            <p>And the last part: <strong>@angular-devkit/*</strong></p>
+            <p>These packages are the engine powering Angular CLI on the background.</p>
+            <p><strong>@angular-devkit/core</strong>: Utility functions used by the rest of packages of @angular-devkit</p>
+            <p><strong>@angular-devkit/schematics</strong>: The engine for creating code from schematics.</p>
+            <p><strong>@angular-devkit/architect</strong>: Engine for complex build tools (we'll see it more in-depth later).</p>
+
             <h3>Angular Workspace</h3>
+            <p>So, I've said that Angular CLI is the handler of your Angular Workspace, but what is exactly the worksapce and what does this mean?</p>
+            <p>Simplifying A LOT, the workspace is the root folder of your Angular project. Well, at least if you create it via <strong>ng new</strong> (using the Angular CLI).</p>
+            <p>This folder </p>
             <h3>Angular.json</h3>
             <h3>Typescript build process</h3>
             <h3>Architects & Builders</h3>
-            <h3>Schematics</h3>
+            <h3>Code scaffolding level 1: ng generate</h3>
+            <h3>Code scaffolding level 2: Schematics</h3>
             <h3>Cheatsheet</h3>
         </section>
         <section class="main-section" id="modules">
