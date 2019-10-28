@@ -34,7 +34,7 @@
         </header>
         <ul>
             <li><a href="#introduction" class="nav-link">Introduction</a></li>
-            <li><a href="#angular-cli" class="nav-link">Angular CLI 101</a></li>
+            <li><a href="#angular-cli" class="nav-link">Angular CLI</a></li>
             <li><a href="#routing" class="nav-link">Routing</a></li>
             <li><a href="#container-presentation-pattern" class="nav-link">Container-Presentation Design Pattern</a></li>
             <li><a href="#state-management" class="nav-link">State Management</a></li>
@@ -56,31 +56,66 @@
                 <h2>Introduction</h2>
             </header>
             <p>The main goal of this guide is to help developers on common simple and complex use cases developing an application with Angular.</p>
-            <p>Is a <strong>very opinionated guide</strong> and the aim is at high level. This isn't a <em>from zero guide</em> nor an <em>API Reference</em>. Official Angular documentation will be referenced in such cases when some basic knowledge is needed.</p>
-            <h3>Angular workspace</h3>
-            <p></p>
-            <h3>Dependency Injection</h3>
-            <p></p>
-            <h3>Components lifecycle</h3>
-            <p></p>
+            <p>Is a <strong>very opinionated guide</strong> and the aim is at high level. This isn't a <em>from zero guide</em> nor an <em>API Reference</em>. <a href="https://angular.io" target="_blank">Official Angular documentation</a> will be referenced in such cases when some basic knowledge is needed.</p>
+
+            <h3>About Angular</h3>
+            <p>Angular is a web application develoment framework to be used for the Front-End. It was developed to run on Javascript. However it's desgined to be used in Typescript, and transpiled to Javascript or other targets.</p>
+            
+            <p>
+                I say that it is a Web <strong>Application</strong> Framework for a reason.
+                 If you want to create a mockup, a static website or a small app (small enough to be only maintained by you)
+                 Angular will be an overkill and there are other frameworks out there that may fit your needs more accurately (like React for example).
+            </p>
+            <h4>Web Components vs Web Applications</h4>
+            <p>
+                Other frameworks like <strong>React</strong> are <em>Web Component Frameworks</em>, but <strong>Angular</strong> is a Web Application
+                 framework because it comes with a sort of other tools (and opinions) that go far beyond Web Components.
+            </p>
+            <p>
+                Ok, Angular helps creating components, but:
+            </p>
+            <ul>
+                <li>You can't render a component outside Angular (before Ivy). <em>There is Angular Elements, but it still works inside Angular</em></li>
+                <li>It does a LOT of more things for you: building proccess handling, bundling, routing, lazy loading, platform agnostic rendering, tooling for state management, i18n handling, component prototyping</li>
+            </ul>
+            <p>So, we can say that Angular is a Web Component framework, <strong>but it also adds a lot of functionality that you are going to need for developing a full Web Application.</strong></p>
+            <p>In the end, if your application is big and serious enough, you are going to need this kind of tools. <strong>The difference is Angular has <em>made</em> the decission for you already.</strong></p>
+            <p>React for example started as a simple library for Front-End components, but now you can find a lot of tools in the React environment that suit the roles of the rest of parts of Angular (because in the end, you are going to need them).</p>
+
+            <p>That is why I say that Angular (as this guide) is very opinionated. You can review and decide what tool or strategy use for each situation and edge case, or go ahead with the solution more experienced developers proposed</p>
+            <p>This, however, isn't always a pro. Sometimes we need something more specific or handmade tailored.</p>
+            
+            <p>Anyway, everything can be changed. The Angular team deeply though about it and they improve the framework with each release, so everything is abstracted enough to be replaced with custom parts when needed.</p>
+
+            <h4>What's inside Angular?</h4>
+            <ul>
+                <li>The Angular Core - Renderer2 and rest of abstractions</li>
+            </ul>
         </section>
         <section class="main-section" id="angular-cli">
             <header>
                 <h2>Angular CLI</h2>
             </header>
-            <p>Always use the CLI.</p>
-            <p>Doing manually something that can be achieved by the CLI is a source of bugs and mistakes, and will slow you down.</p>
-            <h3>Ng New</h3>
+            <h3>Angular CLI anatomy & usage</h3>
+            <h3>Angular Workspace</h3>
+            <h3>Angular.json</h3>
+            <h3>Typescript build process</h3>
+            <h3>Architects & Builders</h3>
             <h3>Schematics</h3>
             <h3>Cheatsheet</h3>
+        </section>
+        <section class="main-section" id="modules">
+            <header>
+                <h2>Modules</h2>
+            </header>
+            <h3>NgModules Anatomy</h3>
+            <h3>Modules Bootstrap Process</h3>
+            <h3>Modules Architecture</h3>
         </section>
         <section class="main-section" id="routing">
             <header>
                 <h2>Routing</h2>
             </header>
-            <p></p>
-            <p></p>
-            <p></p>
             <h3>The Router</h3>
             <h3>Snapshots</h3>
             <h3>Routing events</h3>
@@ -88,12 +123,12 @@
         </section>
         <section class="main-section" id="container-presentation-pattern">
             <header>
-                <h2>Container-Presentation Design Pattern</h2>
+                <h2>Components</h2>
             </header>
+            <h3>Container-Presentation Design Pattern</h3>
+            <h4>Presentational Components</h4>
             <p></p>
-            <h3>Presentational Components</h3>
-            <p></p>
-            <h3>Container Components</h3>
+            <h4>Container Components</h4>
             <p></p>
         </section>
         <section class="main-section" id="state-management">
@@ -211,8 +246,9 @@
                 <h2>External tools</h2>
             </header>
             <p></p>
-            <h3>Angular Console</h3>
-            <h3>source-map-explorer</h3>
+            <h3>Command Line Tools</h3>
+            <h3>IDE Extensions</h3>
+            <h3>Browser Extensions</h3>
         </section>
     </main>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
