@@ -88,9 +88,16 @@
             <p>Anyway, everything can be changed. The Angular team deeply though about it and they improve the framework with each release, so everything is abstracted enough to be replaced with custom parts when needed.</p>
 
             <h4>What's inside Angular?</h4>
+            <p>So, let's take a quick look to what comes with Angular:</p>
             <ul>
+                <li>ngc - Ng Compiler (a wrapper around Typescript Complier)</li>
+                <li>Webpack - Bundler</li>
+                <li>Zone.js - Asynchronus abstraction layer (asynchronus context provider, change detection, error handling)</li>
+                <li>RxJS - Observer pattern library/framework</li>
                 <li>The Angular Core - Renderer2 and rest of abstractions</li>
+                <li>WIP?</li>
             </ul>
+            <p>The Angular Core it's Angular itself, and it relays on RxJS for every reactive interaction, but besides that, any other part of the package could be changed to another tool.</p>
         </section>
         <section class="main-section" id="angular-cli">
             <header>
