@@ -58,48 +58,50 @@
             <p>The main goal of this guide is to help developers on common simple and complex use cases developing an application with Angular.</p>
             <p>Is a <strong>very opinionated guide</strong> and the aim is at high level. This isn't a <em>from zero guide</em> nor an <em>API Reference</em>. <a href="https://angular.io" target="_blank">Official Angular documentation</a> will be referenced in such cases when some basic knowledge is needed.</p>
 
-            <h3>About Angular</h3>
-            <p>Angular is a web application develoment framework to be used for the Front-End. It was developed to run on Javascript. However it's desgined to be used in Typescript, and transpiled to Javascript or other targets.</p>
-            
-            <p>
-                I say that it is a Web <strong>Application</strong> Framework for a reason.
-                 If you want to create a mockup, a static website or a small app (small enough to be only maintained by you)
-                 Angular will be an overkill and there are other frameworks out there that may fit your needs more accurately (like React for example).
-            </p>
-            <h4>Web Components vs Web Applications</h4>
-            <p>
-                Other frameworks like <strong>React</strong> are <em>Web Component Frameworks</em>, but <strong>Angular is a Web Application framework</strong> 
-                because it comes with a sort of other tools (and opinions) that go far beyond Web Components.
-            </p>
-            <p>
-                Ok, Angular helps creating components, but:
-            </p>
-            <ul>
-                <li>You can't render a component outside Angular (before Ivy). <em>There is Angular Elements, but it still works inside Angular</em></li>
-                <li>It does a LOT of more things for you: building proccess handling, bundling, routing, lazy loading, platform agnostic rendering, tooling for state management, i18n handling, component prototyping</li>
-            </ul>
-            <p>So, we can say that Angular is a Web Component framework, <strong>but it also adds a lot of functionality that you are going to need for developing a full Web Application.</strong></p>
-            <p>In the end, if your application is big and serious enough, you are going to need this kind of tools. <strong>The difference is Angular has <em>made</em> the decision for you already.</strong></p>
-            <p>React for example started as a simple library for Front-End components, but now you can find a lot of tools in the React environment that suit the roles of the rest of parts of Angular (because in the end, you are going to need them).</p>
-
-            <p>That is why I say that Angular (as this guide) is very opinionated. You can review and decide what tool or strategy use for each situation and edge case, or go ahead with the solution more experienced developers proposed</p>
-            <p>This, however, isn't always a pro. Sometimes we need something more specific or handmade tailored.</p>
-            
-            <p>Anyway, everything can be changed. The Angular team deeply though about it and they improve the framework with each release, so everything is abstracted enough to be replaced with custom parts when needed.</p>
-
-            <h4>What's inside Angular?</h4>
-            <p>So, let's take a quick look to what comes with Angular:</p>
-            <ul>
-                <li>Angular CLI</li>
-                <li>ngc - Ng Compiler (a wrapper around Typescript Compiler)</li>
-                <li>Webpack - Bundler</li>
-                <li>Zone.js - Asynchronus abstraction layer (asynchronus context provider, change detection, error handling)</li>
-                <li>RxJS - Observer pattern library/framework</li>
-                <li>Karma - Test runner</li>
-                <li>The Angular Core - Renderer2 and rest of abstractions</li>
-                <li>WIP?</li>
-            </ul>
-            <p>The Angular Core it's Angular itself, and it relays on RxJS for every reactive interaction, but besides that, any other part of the package could be changed to another tool.</p>
+            <section class="sub-section">
+                <h3>About Angular</h3>
+                <p>Angular is a web application develoment framework to be used for the Front-End. It was developed to run on Javascript. However it's desgined to be used in Typescript, and transpiled to Javascript or other targets.</p>
+                
+                <p>
+                    I say that it is a Web <strong>Application</strong> Framework for a reason.
+                        If you want to create a mockup, a static website or a small app (small enough to be only maintained by you)
+                        Angular will be an overkill and there are other frameworks out there that may fit your needs more accurately (like React for example).
+                </p>
+                <h4>Web Components vs Web Applications</h4>
+                <p>
+                    Other frameworks like <strong>React</strong> are <em>Web Component Frameworks</em>, but <strong>Angular is a Web Application framework</strong> 
+                    because it comes with a sort of other tools (and opinions) that go far beyond Web Components.
+                </p>
+                <p>
+                    Ok, Angular helps creating components, but:
+                </p>
+                <ul>
+                    <li>You can't render a component outside Angular (before Ivy). <em>There is Angular Elements, but it still works inside Angular</em></li>
+                    <li>It does a LOT of more things for you: building proccess handling, bundling, routing, lazy loading, platform agnostic rendering, tooling for state management, i18n handling, component prototyping</li>
+                </ul>
+                <p>So, we can say that Angular is a Web Component framework, <strong>but it also adds a lot of functionality that you are going to need for developing a full Web Application.</strong></p>
+                <p>In the end, if your application is big and serious enough, you are going to need this kind of tools. <strong>The difference is Angular has <em>made</em> the decision for you already.</strong></p>
+                <p>React for example started as a simple library for Front-End components, but now you can find a lot of tools in the React environment that suit the roles of the rest of parts of Angular (because in the end, you are going to need them).</p>
+    
+                <p>That is why I say that Angular (as this guide) is very opinionated. You can review and decide what tool or strategy use for each situation and edge case, or go ahead with the solution more experienced developers proposed</p>
+                <p>This, however, isn't always a pro. Sometimes we need something more specific or handmade tailored.</p>
+                
+                <p>Anyway, everything can be changed. The Angular team deeply though about it and they improve the framework with each release, so everything is abstracted enough to be replaced with custom parts when needed.</p>
+    
+                <h4>What's inside Angular?</h4>
+                <p>So, let's take a quick look to what comes with Angular:</p>
+                <ul>
+                    <li>Angular CLI</li>
+                    <li>ngc - Ng Compiler (a wrapper around Typescript Compiler)</li>
+                    <li>Webpack - Bundler</li>
+                    <li>Zone.js - Asynchronus abstraction layer (asynchronus context provider, change detection, error handling)</li>
+                    <li>RxJS - Observer pattern library/framework</li>
+                    <li>Karma - Test runner</li>
+                    <li>The Angular Core - Renderer2 and rest of abstractions</li>
+                    <li>WIP?</li>
+                </ul>
+                <p>The Angular Core it's Angular itself, and it relays on RxJS for every reactive interaction, but besides that, any other part of the package could be changed to another tool.</p>
+            </section>
         </section>
         <section class="main-section" id="angular-cli">
             <header>
@@ -107,48 +109,78 @@
             </header>
             <p>Ok, so we have a lot of different packages, libraries and tools being use there in Angular. How does it orchestrates them? Using the CLI.</p>
             <p><strong>ng</strong> (Angular CLI) is the Angular's swiss army knife.</p>
+            <section class="sub-section">
+                <h3>Angular CLI anatomy</h3>
+                <p>Well, let's start describing it and its usage.</p>
+                <p>First of all, the Angular CLI is no more than the glue for other tools outside the Angular CLI and the dependencies of itself.</p>
+                <p>These dependencies are the real tools doing the job on the background. So we have something like this:</p>
+                <ul>
+                    <li><strong>@angular/cli</strong> - Main package</li>
+                    <li><strong>@schematics/angular</strong></li>
+                    <li><strong>@schematics/update</strong></li>
+                    <li><strong>@angular-devkit/core</strong></li>
+                    <li><strong>@angular-devkit/architect</strong></li>
+                    <li><strong>@angular-devkit/schematics</strong></li>
+                </ul>
 
-            <h3>Angular CLI anatomy</h3>
-            <p>Well, let's start describing it and its usage.</p>
-            <p>First of all, the Angular CLI is no more than the glue for other tools outside the Angular CLI and the dependencies of itself.</p>
-            <p>These dependencies are the real tools doing the job on the background. So we have something like this:</p>
-            <ul>
-                <li><strong>@angular/cli</strong> - Main package</li>
-                <li><strong>@schematics/angular</strong></li>
-                <li><strong>@schematics/update</strong></li>
-                <li><strong>@angular-devkit/core</strong></li>
-                <li><strong>@angular-devkit/architect</strong></li>
-                <li><strong>@angular-devkit/schematics</strong></li>
-            </ul>
+                <p>Let's start with the glue itself.</p>
+                <p><strong>@angular/cli</strong> handles the comands, default behaviors and the external tools used in the build/deploy process (Webpack, Karma, TsLint...). In summary, it handles our Angular Workspace and the automatic tasks run inside it.</p>
 
-            <p>Let's start with the glue itself.</p>
-            <p><strong>@angular/cli</strong> handles the comands, default behaviors and the external tools used in the build/deploy process (Webpack, Karma, TsLint...). In summary, it handles our Angular Workspace and the automatic tasks run inside it.</p>
+                <p>Ok, quite straight forward isn't it?</p>
+                <p>
+                    Then we have the packages that are part of the <strong>@schematics/*</strong> namespace. 
+                    These contain the default schematics provided by Angular Team, and used through the <strong>ng generate</strong> command.
+                </p>
 
-            <p>Ok, quite straight forward isn't it?</p>
-            <p>
-                Then we have the packages that are part of the <strong>@schematics/*</strong> namespace. 
-                These contain the default schematics provided by Angular Team, and used through the <strong>ng generate</strong> command.
-            </p>
+                <p>And the last part: <strong>@angular-devkit/*</strong></p>
+                <p>These packages are the engine powering Angular CLI on the background.</p>
+                <p><strong>@angular-devkit/core</strong>: Utility functions used by the rest of packages of @angular-devkit</p>
+                <p><strong>@angular-devkit/schematics</strong>: The engine for creating code from schematics.</p>
+                <p><strong>@angular-devkit/architect</strong>: Engine for complex build tools (we'll see it more in-depth later).</p>
+            </section>
+            
+            <section class="sub-section">
+                <h3>Angular CLI Key Concepts</h3>
 
-            <p>And the last part: <strong>@angular-devkit/*</strong></p>
-            <p>These packages are the engine powering Angular CLI on the background.</p>
-            <p><strong>@angular-devkit/core</strong>: Utility functions used by the rest of packages of @angular-devkit</p>
-            <p><strong>@angular-devkit/schematics</strong>: The engine for creating code from schematics.</p>
-            <p><strong>@angular-devkit/architect</strong>: Engine for complex build tools (we'll see it more in-depth later).</p>
+                <h4>Angular Workspace</h4>
+                <p>So, I've said that Angular CLI is the handler of your Angular Workspace, but what is exactly the worksapce and what does this mean?</p>
+                <p>Simplifying A LOT, the workspace is the root folder of your Angular project. Well, at least if you create it via <strong>ng new</strong> (using the Angular CLI).</p>
+                <p>This folder contains every file needed by the Angular CLI to run any operation over the project, from creating code to deploying the application.</p>
+                
+                <p>You can find the official definition of <a href="https://angular.io/guide/glossary#workspace" target="_blank">what is an Angular Workspace</a> on the Angular documentation glossary.</p>
 
-            <h4>Angular Workspace</h4>
-            <p>So, I've said that Angular CLI is the handler of your Angular Workspace, but what is exactly the worksapce and what does this mean?</p>
-            <p>Simplifying A LOT, the workspace is the root folder of your Angular project. Well, at least if you create it via <strong>ng new</strong> (using the Angular CLI).</p>
-            <p>This folder contains every file needed by the Angular CLI to run any operation over the project, from creating code to deploying the application.</p>
+                <h4>Schematics</h4>
+                <p>Schematics are a series of scripts (usually contained in a library) that can be run to automate specific actions over the filesystem.</p>
+                <p>Their role is usually to generate code.</p>
 
-            <p>You can find the official definition of <a href="https://angular.io/guide/glossary#workspace" target="_blank">what is an Angular Workspace</a> on the Angular documentation glossary.</p>
+                <p>Angular CLI contains a set of default schematics used by its command ng generate</p>
+                <p>Add example</p>
 
-            <h4>Angular.json</h4>
-            <h4>Architects & Builders</h4>
-            <h3>Typescript build process</h3>
-            <h3>Code scaffolding level 1: ng generate</h3>
-            <h3>Code scaffolding level 2: Schematics</h3>
-            <h3>Cheatsheet</h3>
+                <p>Angular CLI comes with a variety of schematics to generate different kind of code: applications, components, services...</p>
+                <p>As we'll see later, you can also create your own schematics.</p>
+
+                <h4>Architects & Builders</h4>
+                <p>Architects & Builders are two concepts that work together for manage our code from Angular CLI</p>
+                <p>The builders do operations over our code (build the project, serve it, deploy it, run tests...). Each builder is normally related to a dedicated npm package performing a specific task.</p>
+                <p>The architects map between the CLI, the targets & the builders, and also allow to configure the builder for the specific target.</p>
+                <p>So, more or less, architects parse commands to determine the builder, the target and the additional configuration to be used, and then the builders do the real job.</p>
+
+
+                <h4>Angular.json</h4>
+                <p>The angular.json file is the file previously known as angular-cli.json</p>
+                <p>Here is where we link all the pieces of the workspace together so they can work.</p>
+                <p>All the configuration for the workspace, its projects, its architects and builders is defined in this file.</p>
+
+            </section>
+            
+            <section class="sub-section">
+                <h3>Typescript build process</h3>
+            </section>
+
+            <section class="sub-section">
+                <h3>Schematics</h3>
+            </section>
+            
         </section>
         <section class="main-section" id="modules">
             <header>
