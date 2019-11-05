@@ -9,21 +9,40 @@
         body {
             font-family: "Open Sans", Arial, sans-serif;
             font-size: 16px;
-            background-color: #F0F2F1;
-            color: #25292F;
+            background-color: #FAFAFF;
+            color: #151E3F;
             display: flex;
             flex-direction: row;
+        }
+        a {
+            color: #5E5C75;
         }
         nav {
             min-width: 280px;
         }
         main {
             max-height: calc(100vh - 20px);
-            overflow-y: scroll;
             width: 100%;
         }
         h2 {
+            font-size: 2.2rem;
             text-decoration: underline;
+        }
+        h3, h4 {
+            color: #5E5C75;
+        }
+        h3 {
+            font-size: 1.8rem;
+        }
+        h4 {
+            font-size: 1.4rem;
+        }
+        section {
+            padding: 11px 0;
+        }
+        code {
+            padding: 8px;
+            background-color: #B6B6BA;
         }
     </style>
 </head>
@@ -154,7 +173,7 @@
                 <p>Their role is usually to generate code.</p>
 
                 <p>Angular CLI contains a set of default schematics used by its command ng generate</p>
-                <p>Add example</p>
+                <code>ng generate component shared/components/my-shared-component</code>
 
                 <p>Angular CLI comes with a variety of schematics to generate different kind of code: applications, components, services...</p>
                 <p>As we'll see later, you can also create your own schematics.</p>
