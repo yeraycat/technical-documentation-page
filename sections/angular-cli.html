@@ -1,0 +1,76 @@
+<header>
+    <h2>Angular CLI</h2>
+</header>
+<p>Ok, so we have a lot of different packages, libraries and tools being use there in Angular. How does it orchestrates them? Using the CLI.</p>
+<p><strong>ng</strong> (Angular CLI) is the Angular's swiss army knife.</p>
+<section class="sub-section">
+    <h3>Angular CLI anatomy</h3>
+    <p>Well, let's start describing it and its usage.</p>
+    <p>First of all, the Angular CLI is no more than the glue for other tools outside the Angular CLI and the dependencies of itself.</p>
+    <p>These dependencies are the real tools doing the job on the background. So we have something like this:</p>
+    <ul>
+        <li><strong>@angular/cli</strong> - Main package</li>
+        <li><strong>@schematics/angular</strong></li>
+        <li><strong>@schematics/update</strong></li>
+        <li><strong>@angular-devkit/core</strong></li>
+        <li><strong>@angular-devkit/architect</strong></li>
+        <li><strong>@angular-devkit/schematics</strong></li>
+    </ul>
+
+    <p>Let's start with the glue itself.</p>
+    <p><strong>@angular/cli</strong> handles the comands, default behaviors and the external tools used in the build/deploy process (Webpack, Karma, TsLint...). In summary, it handles our Angular Workspace and the automatic tasks run inside it.</p>
+
+    <p>Ok, quite straight forward isn't it?</p>
+    <p>
+        Then we have the packages that are part of the <strong>@schematics/*</strong> namespace. 
+        These contain the default schematics provided by Angular Team, and used through the <strong>ng generate</strong> command.
+    </p>
+
+    <p>And the last part: <strong>@angular-devkit/*</strong></p>
+    <p>These packages are the engine powering Angular CLI on the background.</p>
+    <p><strong>@angular-devkit/core</strong>: Utility functions used by the rest of packages of @angular-devkit</p>
+    <p><strong>@angular-devkit/schematics</strong>: The engine for creating code from schematics.</p>
+    <p><strong>@angular-devkit/architect</strong>: Engine for complex build tools (we'll see it more in-depth later).</p>
+</section>
+
+<section class="sub-section">
+    <h3>Angular CLI Key Concepts</h3>
+
+    <h4>Angular Workspace</h4>
+    <p>So, I've said that Angular CLI is the handler of your Angular Workspace, but what is exactly the worksapce and what does this mean?</p>
+    <p>Simplifying A LOT, the workspace is the root folder of your Angular project. Well, at least if you create it via <strong>ng new</strong> (using the Angular CLI).</p>
+    <p>This folder contains every file needed by the Angular CLI to run any operation over the project, from creating code to deploying the application.</p>
+    
+    <p>You can find the official definition of <a href="https://angular.io/guide/glossary#workspace" target="_blank">what is an Angular Workspace</a> on the Angular documentation glossary.</p>
+
+    <h4>Schematics</h4>
+    <p>Schematics are a series of scripts (usually contained in a library) that can be run to automate specific actions over the filesystem.</p>
+    <p>Their role is usually to generate code.</p>
+
+    <p>Angular CLI contains a set of default schematics used by its command ng generate</p>
+    <code>ng generate component shared/components/my-shared-component</code>
+
+    <p>Angular CLI comes with a variety of schematics to generate different kind of code: applications, components, services...</p>
+    <p>As we'll see later, you can also create your own schematics.</p>
+
+    <h4>Architects & Builders</h4>
+    <p>Architects & Builders are two concepts that work together for manage our code from Angular CLI</p>
+    <p>The builders do operations over our code (build the project, serve it, deploy it, run tests...). Each builder is normally related to a dedicated npm package performing a specific task.</p>
+    <p>The architects map between the CLI, the targets & the builders, and also allow to configure the builder for the specific target.</p>
+    <p>So, more or less, architects parse commands to determine the builder, the target and the additional configuration to be used, and then the builders do the real job.</p>
+
+
+    <h4>Angular.json</h4>
+    <p>The angular.json file is the file previously known as angular-cli.json</p>
+    <p>Here is where we link all the pieces of the workspace together so they can work.</p>
+    <p>All the configuration for the workspace, its projects, its architects and builders is defined in this file.</p>
+
+</section>
+
+<section class="sub-section">
+    <h3>Typescript build process</h3>
+</section>
+
+<section class="sub-section">
+    <h3>Schematics</h3>
+</section>
