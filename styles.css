@@ -1,0 +1,38 @@
+body {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 16px;
+    background-color: #FAFAFF;
+    color: #151E3F;
+    display: flex;
+    flex-direction: row;
+}
+a {
+    color: #5E5C75;
+}
+nav {
+    min-width: 280px;
+}
+main {
+    max-height: calc(100vh - 20px);
+    width: 100%;
+}
+h2 {
+    font-size: 2.2rem;
+    text-decoration: underline;
+}
+h3, h4 {
+    color: #5E5C75;
+}
+h3 {
+    font-size: 1.8rem;
+}
+h4 {
+    font-size: 1.4rem;
+}
+section {
+    padding: 11px 0;
+}
+code {
+    padding: 8px;
+    background-color: #B6B6BA;
+}

@@ -5,34 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Angular Developer Guide</title>
-    <style>
-        body {
-            font-family: "Open Sans", Arial, sans-serif;
-            font-size: 16px;
-            background-color: #F0F2F1;
-            margin: 0;
-            color: #25292F;
-            display: flex;
-            flex-direction: row;
-            box-sizing: border-box;
-        }
-        nav {
-            padding: 8px;
-            min-width: 280px;
-            box-sizing: border-box;
-        }
-        main {
-            padding: 8px;
-            max-height: 100vh;
-            overflow-y: scroll;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        h2 {
-            text-decoration: underline;
-        }
-    </style>
-</head>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
 <body>
     <nav id="navbar">
         <header>
@@ -40,11 +13,11 @@
         </header>
         <ul>
             <li><a href="#introduction" class="nav-link">Introduction</a></li>
-            <li><a href="#angular-cli" class="nav-link">Angular CLI 101</a></li>
+            <li><a href="#angular-cli" class="nav-link">Angular CLI</a></li>
+            <li><a href="#modules" class="nav-link">Modules</a></li>
             <li><a href="#routing" class="nav-link">Routing</a></li>
-            <li><a href="#container-presentation-pattern" class="nav-link">Container-Presentation Design Pattern</a></li>
+            <li><a href="#components" class="nav-link">Components</a></li>
             <li><a href="#state-management" class="nav-link">State Management</a></li>
-            <li><a href="#modules-architecture" class="nav-link">Modules Architecture</a></li>
             <li><a href="#forms" class="nav-link">Forms</a></li>
             <li><a href="#styles" class="nav-link">Styles</a></li>
             <li><a href="#i18n" class="nav-link">I18n</a></li>
@@ -57,170 +30,48 @@
         </ul>
     </nav>
     <main id="main-doc">
-        <section class="main-section" id="introduction">
-            <header>
-                <h2>Introduction</h2>
-            </header>
-            <p>The main goal of this guide is to help developers on common simple and complex use cases developing an application with Angular.</p>
-            <p>Is a <strong>very opinionated guide</strong> and the aim is at high level. This isn't a <em>from zero guide</em> nor an <em>API Reference</em>. Official Angular documentation will be referenced in such cases when some basic knowledge is needed.</p>
-            <h3>Angular workspace</h3>
-            <p></p>
-            <h3>Dependency Injection</h3>
-            <p></p>
-            <h3>Components lifecycle</h3>
-            <p></p>
-        </section>
-        <section class="main-section" id="angular-cli">
-            <header>
-                <h2>Angular CLI 101</h2>
-            </header>
-            <p>Always use the CLI.</p>
-            <p>Doing manually something that can be achieved by the CLI is a source of bugs and mistakes, and will slow you down.</p>
-            <h3>Ng New</h3>
-            <h3>Schematics</h3>
-            <h3>Cheatsheet</h3>
-        </section>
-        <section class="main-section" id="routing">
-            <header>
-                <h2>Routing</h2>
-            </header>
-            <p></p>
-            <p></p>
-            <p></p>
-            <h3>The Router</h3>
-            <h3>Snapshots</h3>
-            <h3>Routing events</h3>
-            <h3>Guards</h3>
-        </section>
-        <section class="main-section" id="container-presentation-pattern">
-            <header>
-                <h2>Container-Presentation Design Pattern</h2>
-            </header>
-            <p></p>
-            <h3>Presentational Components</h3>
-            <p></p>
-            <h3>Container Components</h3>
-            <p></p>
-        </section>
-        <section class="main-section" id="state-management">
-            <header>
-                <h2>State Management</h2>
-            </header>
-            <p></p>
-            <h3>RxJS</h3>
-            <p></p>
-            <h3>NgRX</h3>
-            <p></p>
-            <h4>NgRX-data</h4>
-            <p></p>
-            <h3>Akita</h3>
-            <p></p>
-            <h3>Abstraction layer using the Facade Pattern</h3>
-            <p></p>
-        </section>
-        <section class="main-section" id="modules-architecture">
-            <header>
-                <h2>Modules Architecture</h2>
-            </header>
-            <p></p>
-            <h3>Feature modules & Lazy Loading</h3>
-            <p></p>
-            <h3>Core Module</h3>
-            <p></p>
-            <h3>Shared Module</h3>
-            <p></p>
-            <h3>SCAM Modules</h3>
-            <p></p>
-        </section>
-        <section class="main-section" id="forms">
-            <header>
-                <h2>Forms</h2>
-            </header>
-            <p></p>
-            <h3>Template VS Reactive</h3>
-            <h3>Form validation</h3>
-            <h3>Form components libraries</h3>
-            <h3>Control Value Accessor Interface</h3>
-            <h3>Self-validating Sub-forms</h3>
-        </section>
-        <section class="main-section" id="styles">
-            <header>
-                <h2>Styles</h2>
-            </header>
-            <p></p>
-            <h3>About View Encapsulation</h3>
-            <h3>Using pre-CSS imports</h3>
-        </section>
-        <section class="main-section" id="i18n">
-            <header>
-                <h2>I18n</h2>
-            </header>
-            <p></p>
-            <h3>Angular's Official I18n solution</h3>
-            <h3>Alternatives</h3>
-            <h3>Best approach</h3>
-        </section>
-        <section class="main-section" id="libraries">
-            <header>
-                <h2>Libraries</h2>
-            </header>
-            <p></p>
-            <h3>Using libraries</h3>
-            <p></p>
-            <h3>Creating libraries</h3>
-            <p></p>
-            <h3>Useful Third-Party libraries</h3>
-            <p></p>
-        </section>
-        <section class="main-section" id="workers">
-            <header>
-                <h2>Workers</h2>
-            </header>
-            <p></p>
-        </section>
-        <section class="main-section" id="testing">
-            <header>
-                <h2>Testing</h2>
-            </header>
-            <p></p>
-            <h3>Components unit testing</h3>
-            <p></p>
-            <h3>Styles testing using snapshots</h3>
-            <p></p>
-            <h3>Functional testing</h3>
-            <p></p>
-        </section>
-        <section class="main-section" id="development-setup">
-            <header>
-                <h2>Development Setup</h2>
-            </header>
-            <p></p>
-            <h3>Local development scripts</h3>
-            <h3>Customizing linter</h3>
-            <h3>Proxy to the backend</h3>
-            <h3>Mocking the backend</h3>
-        </section>
-        <section class="main-section" id="production-setup">
-            <header>
-                <h2>Production Setup</h2>
-            </header>
-            <p></p>
-            <h3>AoT Build</h3>
-            <p></p>
-            <h3>Proxy configuration</h3>
-            <p></p>
-            <h3>Server-side rendering</h3>
-            <p></p>
-        </section>
-        <section class="main-section" id="external-tools">
-            <header>
-                <h2>External tools</h2>
-            </header>
-            <p></p>
-            <h3>Angular Console</h3>
-            <h3>source-map-explorer</h3>
-        </section>
+        <section class="main-section" id="introduction"></section>
+        <section class="main-section" id="angular-cli"></section>
+        <section class="main-section" id="modules"></section>
+        <section class="main-section" id="routing"></section>
+        <section class="main-section" id="components"></section>
+        <section class="main-section" id="state-management"></section>
+        <section class="main-section" id="forms"></section>
+        <section class="main-section" id="styles"></section>
+        <section class="main-section" id="i18n"></section>
+        <section class="main-section" id="libraries"></section>
+        <section class="main-section" id="workers"></section>
+        <section class="main-section" id="testing"></section>
+        <section class="main-section" id="development-setup"></section>
+        <section class="main-section" id="production-setup"></section>
+        <section class="main-section" id="external-tools"></section>
     </main>
+    <script>
+        (function() {
+            loadSection('introduction');
+            loadSection('angular-cli');
+            loadSection('modules');
+            loadSection('routing');
+            loadSection('components');
+            loadSection('state-management');
+            loadSection('forms');
+            loadSection('styles');
+            loadSection('i18n');
+            loadSection('libraries');
+            loadSection('workers');
+            loadSection('testing');
+            loadSection('development-setup');
+            loadSection('production-setup');
+            loadSection('external-tools');
+
+            function loadSection(sectionName) {
+                fetch(`sections/${sectionName}.html`)
+                .then(r => r.text())
+                .then(s => document.getElementById(sectionName).innerHTML = s)
+                .catch(e => console.log(e));
+            }
+        })()
+    </script>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>
