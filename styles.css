@@ -17,17 +17,17 @@ main {
     width: 100%;
 }
 h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     text-decoration: underline;
 }
 h3, h4 {
     color: #5E5C75;
 }
 h3 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
 }
 h4 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 section {
     padding: 11px 0;
@@ -35,4 +35,22 @@ section {
 code {
     padding: 8px;
     background-color: #B6B6BA;
+}
+.todo {
+    background-color: rgb(228, 223, 163);
+    padding: 8px 6px;
+}
+@media(min-width: 768px) {
+    main {
+        padding-right: 256px;
+    }
+    h3, h4 {
+        color: #5E5C75;
+    }
+    h3 {
+        font-size: 1.8rem;
+    }
+    h4 {
+        font-size: 1.4rem;
+    }
 }

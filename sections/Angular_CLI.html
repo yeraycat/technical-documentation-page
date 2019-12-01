@@ -68,9 +68,22 @@
 </section>
 
 <section class="sub-section">
-    <h3>Typescript build process</h3>
-</section>
-
-<section class="sub-section">
     <h3>Schematics</h3>
+    <p class="todo"><strong>TODO:</strong> Add here a specific technical description about the schematic and then a explained down-to-earth version of the same</p>
+
+    <h4>Schematics CLI</h4>
+    <p class="todo"><strong>TODO:</strong> Explain the Schematics CLI a little bit before showing the command.</p>
+    <p>To install the Schematics CLI we should run:</p>
+    <code>npm install -g @angular-devkit/schematics-cli</code>
+
+    <h4>Creating a Schematic</h4>
+    <p>We organize the schematics into collections, so we should create a Schematics Collection (a schematics project).</p>
+    <code>schematics blank --name=my-schematic</code>
+    <p>That will create a new schematic collection with a single schematic inside, named my-schematic</p>
+    <p>Then, we can add more schematics to the collection. Just move to the project folder and run:</p>
+    <code>schematics blank --name=-my-new-schematic</code>
+    <p class="todo"><strong>TODO:</strong> Explain the interface of a schematics, and what a tree is (the filesystem)</p>
+
+    <h4>Testing a Schematic</h4>
+    <p class="todo"><strong>TODO:</strong> Add here info about spec files and how to send params to the test of the schematics</p>
 </section>
